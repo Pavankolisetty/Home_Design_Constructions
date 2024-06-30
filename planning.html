@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Building Photo Generator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+
+    .form-container {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #result {
+      margin-top: 20px;
+      width: 800px;
+    }
+    .upanddown {
+      animation: moveUpDown 3s infinite;
+      border-radius: 15px;
+      background-color: lightblue;
+    }
+    @keyframes moveUpDown {
+      0%,
+      100% {
+        transform: translateY(0);
+      } /* Start and end at the original position */
+      50% {
+        transform: translateY(-20px);
+      } /* Move up 20 pixels halfway through */
+    }
+  </style>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="planning.html"> Planning</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="consultancies.html"> Consultancies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="our team.html">Our Team</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="m-0"
+      style="
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0.462),
+            rgba(255, 255, 255, 0.379)
+          ),
+          url('https://images.unsplash.com/photo-1581291519195-ef11498d1cf2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHBsYW5uaW5nfGVufDB8fDB8fHww');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+      "
+    >
+      <br /><br />
+      <p style="font-size: 172px; text-align: center">PLANNING</p>
+      <p
+        style="
+          font-size: 20px;
+          margin: 30px;
+          background-color: rgba(255, 255, 255, 0.575);
+          width: 800px;
+          height: auto;
+        "
+      >
+        Hey There! Tired of consulting, and browsing through plans for your
+        buildings?
+      </p>
+      <p
+        style="
+          font-size: 20px;
+          margin: 30px;
+          background-color: rgba(255, 255, 255, 0.575);
+          width: 800px;
+        "
+      >
+        We are here to your rescue! Fill in the form, and you are ready to go!!
+      </p>
+      <center>
+        <button class="upanddown" type="button">FILL HERE ↓</button>
+      </center>
+    </div>
+
+    <form id="buildingForm" style="background-color: aliceblue; margin: 30px">
+      <br />
+
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <label for="building_type">Building Type:</label>
+            <select id="building_type" name="building_type">
+              <option value="house">House</option>
+              <option value="apartment">Apartment</option>
+              <option value="office">Office</option>
+              <option value="shop">Shop</option>
+            </select>
+          </div>
+          <div class="col-6" style="text-align: end">
+            <label for="area_size">Area Size:</label>
+            <select id="area_size" name="area_size">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="button" id="generateBtn" class="btn btn-outline-primary">
+          Generate Design
+        </button>
+
+        <div class="button-container">
+          <a href="https://cvdlab.github.io/react-planner/"
+            ><button
+              type="button"
+              id="tryOwnDesignBtn"
+              class="btn btn-outline-secondary"
+            >
+              Want to try it on your own design
+            </button></a
+          >
+        </div>
+      </div>
+    </form>
+    <center><div id="result"></div></center>
+    <center>
+      <a
+        type="button"
+        id="downloadLink"
+        style="display: none"
+        download="building_photo.jpg"
+        class="btn btn-outline-dark"
+        style="width: 400px"
+        >Download</a
+      >
+    </center>
+
+    <script>
+      var building_data = {
+        house: {
+          small: [
+            "https://i.pinimg.com/236x/71/4b/2a/714b2aef8a71f387d02380c6ce252691.jpg",
+            "https://etc.usf.edu/clipart/62100/62168/62168_baldwin_fp_md.gif",
+            "https://cdn.houseplansservices.com/content/44rpk32hoodhgi5ur59hrvqu1h/w575.jpg?v=10",
+          ],
+          medium: [
+            "https://cdn.houseplansservices.com/content/rcp66rpmeplicerid7708qk75v/w575.jpg?v=9",
+            "https://www.monsterhouseplans.com/assets/front/images/smallHousePlans/floor%20plan.png",
+            "https://lh3.googleusercontent.com/proxy/Y0TIjGFSAKSohv3-evs_ucQq7PtRmXs8lO52n3wULZ4JU5O_pTLIVP_DG7MX3lxx2r32Hzr65EASu87YyU_sjcN4IoCExy_Vv-TBs4rjJTjsM4Bh4Fd2R-PXRJOJaYbKYME2WCGHi3_HouUh",
+          ],
+          large: [
+            "https://miro.medium.com/v2/resize:fit:1400/0*aycYChA1PmE1oggL.jpg",
+            "https://i.pinimg.com/736x/4b/64/80/4b6480e09d815706f5b07a6d2dd7e8cb.jpg",
+            "https://i.pinimg.com/564x/dd/08/e7/dd08e7aad2fa25932409c84558def00b.jpg",
+          ],
+        },
+        apartment: {
+          small: [
+            "https://cedreo.com/wp-content/uploads/cloudinary/US_Apartment_04_2D_554px_xjzvwa.jpg",
+            "https://images.edrawmax.com/examples/apartment-floor-plan/example2.png",
+            "https://blog.architizer.com/wp-content/uploads/22-6.jpg",
+          ],
+          medium: [
+            "https://i.pinimg.com/736x/92/29/c1/9229c136ee95da91865b3b4974eeb644.jpg",
+            "https://i.pinimg.com/736x/92/29/c1/9229c136ee95da91865b3b4974eeb644.jpg",
+            "https://medialibrarycfo.entrata.com/2485/MLv3/4/22/2022/3/26/32810/5a4546f91055e697.gif",
+          ],
+          large: [
+            "https://alexanbuckheadvillage.com/wp-content/uploads/2022/08/Buckhead-Aug-19-image.png",
+            "https://alexanmemorial.com/wp-content/uploads/2021/12/memorial-dec10-pic-1024x722.jpg",
+            "https://alexanaccess.com/wp-content/uploads/2023/04/Access-Apr-28-image-892x1024.jpg",
+          ],
+        },
+        office: {
+          small: [
+            "https://images.edrawmax.com/examples/office-layout-examples/office-layout-example-3.jpg",
+            "https://images.edrawmax.com/examples/office-layout-examples/office-layout-example-7.jpg",
+            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.conceptdraw.com%2Fexamples%2Frectangular-shape-small-office-floor-plan&psig=AOvVaw14P3V11aygT1d0PGxt45fd&ust=1709129558087000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCJij3PTZy4QDFQAAAAAdAAAAABAD",
+          ],
+          medium: [
+            "https://roseoffices.com/wp-content/uploads/chilton.jpg",
+            "https://online.visual-paradigm.com/repository/images/f0f32f58-c9ba-4a51-aa5a-eba27e758d30/floor-plan/work-office-design/rectangular-house-floor-plan.png",
+            "https://images.edrawmax.com/what-is/office-layout/co-working-office-layout.jpg",
+          ],
+          large: [
+            "https://thumb.cadbull.com/img/product_img/original/Big-Layout-plan-of-a-office-dwg-file-Tue-Jan-2018-11-36-18.png",
+            "https://office.mec.co.jp/en/assets/img/special/grand_cube/img_floor03.png",
+            "https://fpg.roomsketcher.com/image/level/178/2d/Large-Office-2D-Floor-Plan.jpg",
+          ],
+        },
+        shop: {
+          small: [
+            "https://wcs.smartdraw.com/store-layout/examples/convenience-store-layout-thumb.png?bn=15100111907",
+            "https://i.pinimg.com/736x/8b/ee/bd/8beebd74bff9980174d96a2937ea826b.jpg",
+            "https://i.ytimg.com/vi/-3minIhTCJQ/maxresdefault.jpg",
+          ],
+          medium: [
+            "https://i.pinimg.com/474x/2f/ab/8b/2fab8bb1273459c4551b837be5da4c4f.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/0/0a/Machine_Shop%2C_Plan_of_Works_shown_in_Elevation%2C_1906.jpg",
+            "https://www.researchgate.net/publication/283836765/figure/fig3/AS:563045303635968@1511251869195/Layout-of-shop-floor-before-Changes.png",
+          ],
+          large: [
+            "https://i.pinimg.com/736x/6c/41/19/6c411971d5ff9f4c6322ec524d2721e2.jpg",
+            "https://i.pinimg.com/736x/c4/43/a9/c443a972b0d7a4e4fec8672d936567bd.jpg",
+            "https://i.pinimg.com/736x/75/9c/38/759c3865ae28f2c44df6c7cd3fc9c2f5.jpg",
+          ],
+        },
+      };
+
+      document
+        .getElementById("generateBtn")
+        .addEventListener("click", function () {
+          var buildingType = document.getElementById("building_type").value;
+          var areaSize = document.getElementById("area_size").value;
+          var selectedPhotos = building_data[buildingType][areaSize];
+          var randomPhoto =
+            selectedPhotos[Math.floor(Math.random() * selectedPhotos.length)];
+
+          // Create image element
+          var img = document.createElement("img");
+          img.src = randomPhoto;
+          img.alt = "Building Photo";
+          img.style.width = "800px";
+
+          // Append image to result div
+          var resultDiv = document.getElementById("result");
+          resultDiv.innerHTML = "";
+          resultDiv.appendChild(img);
+
+          // Show download link
+          var downloadLink = document.getElementById("downloadLink");
+          downloadLink.href = randomPhoto;
+          downloadLink.style.display = "block";
+        });
+    </script>
+  </body>
+</html>

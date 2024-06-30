@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-image: url("https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-size: cover;
+        background-position: center;
+      }
+
+      form {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.7
+        ); /* Semi-transparent white background */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 4px;
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.5
+        ); /* Slightly transparent white */
+        backdrop-filter: blur(5px); /* Apply a blur effect behind the element */
+        color: #333; /* Text color */
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      button {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        color: #333;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      #successMessage {
+        display: none;
+        font-size: 24px;
+        font-weight: bold;
+        color: #4caf50;
+        margin-top: 20px;
+        text-align: center;
+        border: 2px solid #4caf50;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #e8f5e9; /* Light green background */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <form id="signupForm" onsubmit="handleSignUp(event)">
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Username"
+        required
+      />
+
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email"
+        required
+      />
+
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Password"
+        required
+      />
+
+      <label for="confirm-password">Confirm Password:</label>
+      <input
+        type="password"
+        id="confirm-password"
+        name="confirm-password"
+        placeholder="Confirm Password"
+        required
+      />
+
+      <label for="phone">Phone Number:</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        pattern="[0-9]{10}"
+        placeholder="Phone Number"
+        required
+      />
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <div id="successMessage"></div>
+
+    <script>
+      function handleSignUp(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const username = document.getElementById("username").value;
+        const successMessage = document.getElementById("successMessage");
+
+        // Display success message
+        successMessage.textContent = `${username} registration successfully done`;
+        successMessage.style.display = "block";
+
+        // Redirect after a delay (simulated)
+        setTimeout(() => {
+          window.location.href = "login.html";
+        }, 2000); // Redirect after 2 seconds (simulated)
+
+        return false; // Prevent form from submitting
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home page</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="C:\Users\pavan kumar\OneDrive\Pictures\hd.png"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "poppins", sans-serif;
+      }
+
+      .whole {
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+          rgba(12, 3, 51, 0.3),
+          rgba(12, 3, 51, 0.3)
+        );
+        position: relative;
+        padding: 0 5%;
+        align-items: center;
+        justify-content: center;
+      }
+
+      nav {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px 8%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      nav ul li:sign-in {
+        float: right;
+      }
+
+      li {
+        float: left;
+      }
+      nav ul li {
+        list-style: none;
+        display: inline;
+        margin-right: 40px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+      }
+
+      /* styles for the center content */
+      .center {
+        padding: 40px;
+        text-align: center;
+      }
+
+      .center h1 {
+        font-size: 160px;
+        color: #fff;
+        font-weight: 500;
+        padding-top: 150px;
+      }
+      .center h2 {
+        font-size: 50px;
+        color: #fff;
+        font-weight: 300;
+        padding-top: 150px;
+      }
+      .center a {
+        text-decoration: none;
+        display: inline-block;
+        color: #fff;
+        font-size: 16px;
+        border: 2px solid #fff;
+        border-radius: 50px;
+        margin-top: 20px;
+        padding: 20px 30px 20px 30px;
+      }
+
+      .back-vid {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+      }
+
+      @media (min-aspect-ratio: 16/9) {
+        .back-vid {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      @media (max-aspect-ratio: 16/9) {
+        .back-vid {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="whole">
+      <video autoplay loop muted plays-inline class="back-vid">
+        <source src="hd.mp4" type="video/mp4" />
+      </video>
+
+      <nav>
+        <ul id="buttons">
+          <li><a href="#home">Home</a></li>
+          <li><a href="planning.html">Planning</a></li>
+          <li>
+            <a id="cons" href="consultancies.html" target="_blank"
+              >Consultancies</a
+            >
+          </li>
+          <li><a href="our team.html">Our team</a></li>
+          <li id="sign-in"><a href="login.html" target="_blank">Log in</a></li>
+          <li id="sign-up">
+            <a href="signup.html" target="_blank"> Sign-up</a>
+          </li>
+        </ul>
+      </nav>
+      <center id="center">
+        <div class="center">
+          <h1>HD Constructions</h1>
+          <h2>The future delivery is here</h2>
+          <a href="consultancies.html" target="_blank">Explore</a>
+        </div>
+      </center>
+    </div>
+  </body>
+</html>
